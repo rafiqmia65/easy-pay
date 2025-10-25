@@ -24,7 +24,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-md">
+    <nav className="sticky top-0 z-50 backdrop-blur-md">
       <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-2">
         {/* Logo */}
         <BrandLogo />
@@ -41,7 +41,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-primary cursor-pointer"
+          className="md:hidden cursor-pointer text-secondary-foreground"
           onClick={() => setIsOpen(true)}
         >
           <Menu size={28} />

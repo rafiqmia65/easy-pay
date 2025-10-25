@@ -17,24 +17,24 @@ const MobileNav: React.FC<MobileNavProps> = ({
 }) => {
   return (
     <>
-      {/* Drawer Sidebar */}
+      {/* Sidebar Drawer */}
       <div
-        className={`fixed top-0 left-0 h-full w-4/5 max-w-sm bg-background shadow-xl transform transition-transform duration-300 ease-in-out z-50 ${
-          isOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
+        className={`lg:hidden bg-background fixed top-0 left-0 h-full w-4/5 max-w-sm transform transition-transform duration-300 ease-in-out z-50 shadow-xl
+          ${isOpen ? "translate-x-0" : "-translate-x-full"} 
+          `}
       >
         {/* Header */}
-        <div className="flex items-center justify-between px-4 py-4 border-b border-accent bg-background">
+        <div className="flex items-center justify-between px-4 py-4 border-b">
           <BrandLogo />
           <button
             onClick={() => setIsOpen(false)}
-            className="text-primary hover:text-secondary-foreground cursor-pointer"
+            className="text-secondary-foreground cursor-pointer"
           >
             <X size={26} />
           </button>
         </div>
 
-        {/* Links */}
+        {/* Navigation Links */}
         <ul className="flex flex-col gap-4 px-6 py-6">
           {navLinks.map((link, index) => (
             <li key={index}>
@@ -50,7 +50,7 @@ const MobileNav: React.FC<MobileNavProps> = ({
         </ul>
 
         {/* Contact Button */}
-        <div className="px-6 mt-4">
+        <div className="px-6 mt-auto mb-6">
           <Button className="bg-primary-foreground hover:bg-primary-foreground/80 text-white w-full">
             Contact Us
           </Button>
@@ -59,10 +59,7 @@ const MobileNav: React.FC<MobileNavProps> = ({
 
       {/* Overlay */}
       {isOpen && (
-        <div
-          className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40"
-          onClick={() => setIsOpen(false)}
-        />
+        <div className="fixed inset-0 z-40" onClick={() => setIsOpen(false)} />
       )}
     </>
   );
