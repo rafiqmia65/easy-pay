@@ -8,7 +8,7 @@ const Header = () => {
       {/* ===== Gradient Background Layers (independent, won't clip sidebar) ===== */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute bottom-0 left-0 w-[25%] h-full bg-gradient-to-tr from-primary-foreground/6 to-transparent" />
-        <div className="absolute top-[40%] left-[35%] w-[40%] h-[60%] bg-gradient-to-t from-orange-400/30 to-transparent blur-2xl" />
+        <div className="absolute top-[36%] left-[35%] w-[40%] h-[60%] bg-gradient-to-t from-orange-400/30 to-transparent blur-2xl" />
         <div className="absolute bottom-0 right-0 w-[25%] h-full bg-gradient-to-tl from-secondary-foreground/15 to-transparent" />
       </div>
 
