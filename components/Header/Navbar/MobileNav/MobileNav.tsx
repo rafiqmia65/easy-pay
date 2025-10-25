@@ -19,12 +19,12 @@ const MobileNav: React.FC<MobileNavProps> = ({
     <>
       {/* Drawer Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-full w-4/5 max-w-sm bg-background shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
+        className={`fixed top-0 left-0 h-full w-4/5 max-w-sm bg-background shadow-xl transform transition-transform duration-300 ease-in-out z-50 ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         {/* Header */}
-        <div className="flex items-center justify-between px-4 py-4 border-b border-gray-200">
+        <div className="flex items-center justify-between px-4 py-4 border-b border-accent bg-background">
           <BrandLogo />
           <button
             onClick={() => setIsOpen(false)}
@@ -60,7 +60,7 @@ const MobileNav: React.FC<MobileNavProps> = ({
       {/* Overlay */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black/30 backdrop-blur-sm z-40"
+          className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40"
           onClick={() => setIsOpen(false)}
         />
       )}

@@ -24,30 +24,32 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="max-w-6xl mx-auto flex items-center justify-between px-4 lg:px-0 py-4 relative">
-      {/* Logo */}
-      <BrandLogo />
+    <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-md">
+      <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-2">
+        {/* Logo */}
+        <BrandLogo />
 
-      {/* Desktop Navigation */}
-      <DesktopNav navLinks={navLinks} fontClass={urbanist.className} />
+        {/* Desktop Navigation */}
+        <DesktopNav navLinks={navLinks} fontClass={urbanist.className} />
 
-      {/* Contact Button (Desktop) */}
-      <div className="hidden md:block">
-        <Button className="bg-primary-foreground text-background hover:bg-primary-foreground/80">
-          Contact Us
-        </Button>
+        {/* Contact Button (Desktop) */}
+        <div className="hidden md:block">
+          <Button className="bg-primary-foreground text-background hover:bg-primary-foreground/80">
+            Contact Us
+          </Button>
+        </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden text-primary cursor-pointer"
+          onClick={() => setIsOpen(true)}
+        >
+          <Menu size={28} />
+        </button>
+
+        {/* Mobile Navigation Drawer */}
+        <MobileNav isOpen={isOpen} setIsOpen={setIsOpen} navLinks={navLinks} />
       </div>
-
-      {/* Mobile Menu Button */}
-      <button
-        className="md:hidden text-primary cursor-pointer"
-        onClick={() => setIsOpen(true)}
-      >
-        <Menu size={28} />
-      </button>
-
-      {/* Mobile Navigation Drawer */}
-      <MobileNav isOpen={isOpen} setIsOpen={setIsOpen} navLinks={navLinks} />
     </nav>
   );
 };

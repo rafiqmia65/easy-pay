@@ -13,7 +13,7 @@ const DesktopNav: React.FC<DesktopNavProps> = ({ navLinks, fontClass }) => {
         <li key={index}>
           <Link
             href={link.href}
-            className="text-primary hover:text-secondary-foreground transition-colors font-semibold"
+            className="text-secondary hover:text-secondary-foreground transition-colors font-semibold"
           >
             {link.label}
           </Link>
