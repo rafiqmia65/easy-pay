@@ -7,7 +7,7 @@ const BannerImageSection = () => {
     <div className="order-1 md:order-2 relative">
       {/* Main Image */}
       <Image
-        src="/banner/man-wearing.png"
+        src="/Banner/man-wearing.png"
         alt="Man Wearing"
         width={520}
         height={450}
@@ -27,7 +27,7 @@ const BannerImageSection = () => {
             <div className="flex items-center gap-2">
               <p className="text-[#37C390] text-sm">3.09%</p>
               <Image
-                src="/banner/Vector2.png"
+                src="/Banner/Vector2.png"
                 alt="Vector"
                 width={10}
                 height={6}
@@ -39,7 +39,7 @@ const BannerImageSection = () => {
 
       {/* Active Users */}
       <div className="absolute right-2 top-1/3 mt-7 flex gap-2 items-center bg-background backdrop-blur-md p-4 rounded-sm shadow-md">
-        <Image src="/banner/Avatars.png" width={96} height={40} alt="avatars" />
+        <Image src="/Banner/Avatars.png" width={96} height={40} alt="avatars" />
         <div>
           <Paragraph className="text-primary text-sm font-bold">
             120K+

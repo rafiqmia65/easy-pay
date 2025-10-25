@@ -13,7 +13,7 @@ const BannerTextSection = () => {
         </h1>
         <Image
           className="absolute top-10 lg:top-14 right-0"
-          src="/banner/Vector.png"
+          src="/Banner/Vector.png"
           alt="Vector"
           width={300}
           height={6}
@@ -33,7 +33,7 @@ const BannerTextSection = () => {
           alt="App Store"
         />
         <Image
-          src="/banner/GooglePlay.png"
+          src="/Banner/GooglePlay.png"
           width={144}
           height={48}
           alt="Google Play"
