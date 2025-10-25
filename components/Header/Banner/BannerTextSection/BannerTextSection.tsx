@@ -27,7 +27,7 @@ const BannerTextSection = () => {
 
       <div className="flex gap-6 items-center mt-10">
         <Image
-          src="/banner/AppStore.png"
+          src="/Banner/AppStore.png"
           width={144}
           height={48}
           alt="App Store"
