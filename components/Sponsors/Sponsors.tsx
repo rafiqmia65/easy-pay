@@ -24,7 +24,7 @@ const Sponsors = () => {
         transition={{
           repeat: Infinity,
           ease: "linear",
-          duration: 5,
+          duration: 40,
         }}
       >
         {[...sponsors, ...sponsors].map((src, idx) => (

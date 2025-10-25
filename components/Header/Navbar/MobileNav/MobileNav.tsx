@@ -51,7 +51,7 @@ const MobileNav: React.FC<MobileNavProps> = ({
 
         {/* Contact Button */}
         <div className="px-6 mt-auto mb-6">
-          <Button className="bg-primary-foreground hover:bg-primary-foreground/80 text-white w-full">
+          <Button className="bg-primary-foreground text-white w-full">
             Contact Us
           </Button>
         </div>

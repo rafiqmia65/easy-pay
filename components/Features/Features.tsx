@@ -35,7 +35,7 @@ const Features = () => {
   return (
     <Section>
       <SmallHeading className="text-center">FEATURES</SmallHeading>
-      <SectionHeading className="text-center mb-14">
+      <SectionHeading className="text-center mx-auto mb-14">
         Why choose Easy Pay for effortless payments?
       </SectionHeading>
 

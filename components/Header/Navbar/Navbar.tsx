@@ -34,7 +34,7 @@ const Navbar = () => {
 
         {/* Contact Button (Desktop) */}
         <div className="hidden md:block">
-          <Button className="bg-primary-foreground text-background hover:bg-primary-foreground/80">
+          <Button className="bg-primary-foreground text-background">
             Contact Us
           </Button>
         </div>
