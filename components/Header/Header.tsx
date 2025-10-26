@@ -27,7 +27,7 @@ const Header = () => {
       <div
         className={`fixed left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "top-0 bg-linear-to-r from-primary-foreground/20 via-orange-400/65 to-secondary-foreground/20 backdrop-blur-md"
+            ? "top-0 bg-linear-to-r from-primary-foreground/20 via-orange-400/65 to-secondary-foreground/20 backdrop-blur-md bg-background/80"
             : "top-2 pt-2"
         }`}
       >

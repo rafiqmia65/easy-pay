@@ -46,7 +46,7 @@ const Footer = () => {
           </div>
 
           {/* Right Columns */}
-          <div className="md:col-span-2 flex justify-end gap-16">
+          <div className="md:col-span-2 flex md:justify-end gap-16">
             {/* Short Links */}
             <div>
               <h3 className="text-lg font-semibold text-primary mb-4">
