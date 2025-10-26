@@ -4,6 +4,7 @@ import HowItWorks from "@/components/HowItWorks/HowItWorks";
 import Security from "@/components/Security/Security";
 import Pricing from "@/components/Pricing/Pricing";
 import Testimonial from "@/components/Testimonial/Testimonial";
+import CtaSection from "@/components/CtaSection/CtaSection";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Security></Security>
       <Pricing></Pricing>
       <Testimonial></Testimonial>
+      <CtaSection></CtaSection>
     </>
   );
 }

@@ -1,4 +1,3 @@
-// src/components/Testimonial/TestimonialCard/TestimonialCard.tsx
 import React from "react";
 import StarRating from "../StarRating/StarRating";
 import Image from "next/image";

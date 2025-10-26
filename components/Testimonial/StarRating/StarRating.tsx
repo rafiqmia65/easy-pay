@@ -1,4 +1,3 @@
-// src/components/Testimonial/StarRating.tsx
 import React from "react";
 import { Star } from "lucide-react";
 
