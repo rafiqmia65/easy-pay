@@ -1,6 +1,7 @@
 import Features from "@/components/Features/Features";
 import Sponsors from "@/components/Sponsors/Sponsors";
 import HowItWorks from "@/components/HowItWorks/HowItWorks";
+import Security from "@/components/Security/Security";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Features></Features>
       <Sponsors></Sponsors>
       <HowItWorks></HowItWorks>
+      <Security></Security>
     </>
   );
 }
