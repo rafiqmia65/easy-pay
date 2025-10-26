@@ -24,8 +24,8 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 backdrop-blur-md">
-      <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-2">
+    <nav className="sticky top-0 z-50 backdrop-blur-md bg-background/80 border-b">
+      <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
         {/* Logo */}
         <BrandLogo />
 
@@ -34,17 +34,17 @@ const Navbar = () => {
 
         {/* Contact Button (Desktop) */}
         <div className="hidden md:block">
-          <Button className="bg-primary-foreground text-background">
+          <Button className="bg-primary-foreground text-white hover:bg-primary/90 px-6 py-2">
             Contact Us
           </Button>
         </div>
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden cursor-pointer text-secondary-foreground"
+          className="md:hidden cursor-pointer text-secondary-foreground p-2 hover:bg-muted rounded-lg transition-colors"
           onClick={() => setIsOpen(true)}
         >
-          <Menu size={28} />
+          <Menu size={24} />
         </button>
 
         {/* Mobile Navigation Drawer */}

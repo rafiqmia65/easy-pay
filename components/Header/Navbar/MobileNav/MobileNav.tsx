@@ -17,50 +17,60 @@ const MobileNav: React.FC<MobileNavProps> = ({
 }) => {
   return (
     <>
-      {/* Sidebar Drawer */}
+      {/* Overlay */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black/20 z-40 lg:hidden"
+          onClick={() => setIsOpen(false)}
+        />
+      )}
+
+      {/* Sidebar Drawer - Full Height */}
       <div
-        className={`lg:hidden bg-background fixed top-0 left-0 h-full w-4/5 max-w-sm transform transition-transform duration-300 ease-in-out z-50 shadow-xl
-          ${isOpen ? "translate-x-0" : "-translate-x-full"} 
-          `}
+        className={`lg:hidden bg-background fixed top-0 left-0 h-screen w-4/5 max-w-sm transform transition-transform duration-300 ease-in-out z-50 shadow-xl border-r flex flex-col
+          ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
       >
-        {/* Header */}
-        <div className="flex items-center justify-between px-4 py-4 border-b">
+        {/* Header with Logo and Close Button */}
+        <div className="flex items-center justify-between px-6 py-4 border-b bg-background shrink-0">
           <BrandLogo />
           <button
             onClick={() => setIsOpen(false)}
-            className="text-secondary-foreground cursor-pointer"
+            className="text-secondary-foreground cursor-pointer p-2 hover:bg-muted rounded-lg transition-colors"
+            aria-label="Close menu"
           >
-            <X size={26} />
+            <X size={24} />
           </button>
         </div>
 
-        {/* Navigation Links */}
-        <ul className="flex flex-col gap-4 px-6 py-6">
-          {navLinks.map((link, index) => (
-            <li key={index}>
-              <Link
-                href={link.href}
-                onClick={() => setIsOpen(false)}
-                className="block text-primary hover:text-secondary-foreground transition-colors font-medium text-lg"
-              >
-                {link.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        {/* Main Navigation Content - Scrollable if needed */}
+        <div className="flex-1 flex flex-col overflow-hidden">
+          {/* Navigation Links */}
+          <div className="flex-1 px-6 py-6 bg-background overflow-y-auto">
+            <nav className="flex flex-col gap-3">
+              {navLinks.map((link, index) => (
+                <Link
+                  key={index}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className="block py-3 px-4 text-secondary hover:bg-secondary-foreground/10 hover:text-secondary-foreground rounded-lg transition-all duration-200 font-medium text-base border border-transparent hover:border-muted-foreground/20"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
 
-        {/* Contact Button */}
-        <div className="px-6 mt-auto mb-6">
-          <Button className="bg-primary-foreground text-white w-full">
-            Contact Us
-          </Button>
+          {/* Contact Button Section */}
+          <div className="px-6 py-6 bg-background border-t shrink-0">
+            <Button
+              className="w-full py-3 bg-primary-foreground text-white hover:bg-primary/90 transition-colors font-medium text-base"
+              onClick={() => setIsOpen(false)}
+            >
+              Contact Us
+            </Button>
+          </div>
         </div>
       </div>
-
-      {/* Overlay */}
-      {isOpen && (
-        <div className="fixed inset-0 z-40" onClick={() => setIsOpen(false)} />
-      )}
     </>
   );
 };
