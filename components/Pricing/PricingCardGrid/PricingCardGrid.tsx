@@ -45,7 +45,7 @@ const pricingPlans = [
 const PricingCardGrid: React.FC = () => {
   return (
     <div className="mt-10">
-      <div className="flex flex-col items-center lg:flex-row justify-center gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-6">
         {pricingPlans.map((plan, index) => (
           <PricingCard key={index} plan={plan} />
         ))}

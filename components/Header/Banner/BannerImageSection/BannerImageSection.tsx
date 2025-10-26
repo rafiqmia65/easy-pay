@@ -1,20 +1,34 @@
+"use client";
+
 import Paragraph from "@/components/shared/Paragraph/Paragraph";
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 
 const BannerImageSection = () => {
   return (
     <div className="order-1 md:order-2 relative">
       {/* Main Image */}
-      <Image
-        src="/Banner/man-wearing.png"
-        alt="Man Wearing"
-        width={520}
-        height={450}
-      />
+      <motion.div
+        initial={{ scale: 0.95, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 0.8 }}
+      >
+        <Image
+          src="/Banner/man-wearing.png"
+          alt="Man Wearing"
+          width={520}
+          height={450}
+        />
+      </motion.div>
 
       {/* Payment Received */}
-      <div className="absolute bottom-10 -left-6 flex gap-2 items-center bg-background backdrop-blur-md p-4 rounded-sm shadow-md">
+      <motion.div
+        initial={{ y: 20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+        className="absolute bottom-10 -left-6 flex gap-2 items-center bg-background backdrop-blur-md p-4 rounded-sm shadow-md"
+      >
         <div>
           <h3 className="text-primary-foreground">Payment Received</h3>
           <Paragraph className="text-primary-foreground text-sm font-semibold">
@@ -35,10 +49,15 @@ const BannerImageSection = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Active Users */}
-      <div className="absolute right-2 top-1/3 mt-7 flex gap-2 items-center bg-background backdrop-blur-md p-4 rounded-sm shadow-md">
+      <motion.div
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.5 }}
+        className="absolute right-2 top-1/3 mt-7 flex gap-2 items-center bg-background backdrop-blur-md p-4 rounded-sm shadow-md"
+      >
         <Image src="/Banner/Avatars.png" width={96} height={40} alt="avatars" />
         <div>
           <Paragraph className="text-primary text-sm font-bold">
@@ -46,7 +65,7 @@ const BannerImageSection = () => {
           </Paragraph>
           <Paragraph className="text-sm">Active users</Paragraph>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

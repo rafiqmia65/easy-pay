@@ -1,8 +1,11 @@
+"use client";
+
 import React from "react";
 import Section from "../shared/Section/Section";
 import SmallHeading from "../shared/SmallHeading/SmallHeading";
 import SectionHeading from "../shared/SectionHeading/SectionHeading";
 import FeatureCard from "./FeatureCard/FeatureCard";
+import { motion } from "framer-motion";
 
 const features = [
   {
@@ -41,13 +44,20 @@ const Features = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {features.map((feature, index) => (
-          <FeatureCard
+          <motion.div
             key={feature.id}
-            title={feature.title}
-            paragraph={feature.paragraph}
-            image={feature.image}
-            index={index}
-          />
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, delay: index * 0.2 }}
+          >
+            <FeatureCard
+              title={feature.title}
+              paragraph={feature.paragraph}
+              image={feature.image}
+              index={index}
+            />
+          </motion.div>
         ))}
       </div>
     </Section>

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 
 interface StepCardProps {
   step: {
@@ -15,7 +16,13 @@ interface StepCardProps {
 
 const StepCard: React.FC<StepCardProps> = ({ step }) => {
   return (
-    <div className="flex flex-col items-start text-left p-6 md:p-8">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.6 }}
+      className="flex flex-col items-start text-left p-6 md:p-8"
+    >
       {/* Step Number & Icon */}
       <div className="relative mb-6">
         {/* Large transparent step number behind the icon */}
@@ -42,7 +49,7 @@ const StepCard: React.FC<StepCardProps> = ({ step }) => {
       <p className="text-secondary max-w-[235px] leading-relaxed">
         {step.description}
       </p>
-    </div>
+    </motion.div>
   );
 };
 

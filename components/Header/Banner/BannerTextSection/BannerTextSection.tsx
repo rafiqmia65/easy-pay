@@ -1,14 +1,22 @@
+"use client";
+
 import Paragraph from "@/components/shared/Paragraph/Paragraph";
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 
 const BannerTextSection = () => {
   return (
-    <div className="order-2 md:order-1">
+    <motion.div
+      initial={{ y: 30, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.8 }}
+      className="order-2 md:order-1"
+    >
       <Paragraph className="mb-2">EASY PAYMENT</Paragraph>
 
       <div className="relative">
-        <h1 className="text-primary font-bold text-4xl `leading-[3.5rem]` lg:text-[56px] mb-6">
+        <h1 className="text-primary font-bold text-4xl leading-14 lg:text-[56px] mb-6">
           Pay fast and smarter from anywhere
         </h1>
         <Image
@@ -39,7 +47,7 @@ const BannerTextSection = () => {
           alt="Google Play"
         />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 
 interface FeatureProps {
   dotColor: string;
@@ -13,13 +16,19 @@ const FeatureCard: React.FC<FeatureProps> = ({
   description,
 }) => {
   return (
-    <div className="flex flex-col p-4">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.6 }}
+      className="flex flex-col p-4"
+    >
       <Image src={dotColor} alt="Dot" width={28} height={28} />
       <h3 className="text-lg mt-6 font-semibold text-primary">{title}</h3>
       <p className="mt-2 text-secondary text-sm leading-relaxed">
         {description}
       </p>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,5 +1,8 @@
+"use client";
+
 import { Card } from "@/components/ui/card";
 import React from "react";
+import { motion } from "framer-motion";
 
 interface BenefitCardProps {
   title: string;
@@ -15,16 +18,22 @@ const BenefitCard: React.FC<BenefitCardProps> = ({
   bgColor,
 }) => {
   return (
-    <Card
-      className="group p-6 border transition-all duration-300"
-      style={{ backgroundColor: bgColor }}
+    <motion.div
+      whileHover={{ scale: 1.05 }}
+      transition={{ type: "spring", stiffness: 300 }}
+      className="h-full"
     >
-      <div className="flex justify-center items-center w-16 h-16 mx-auto mb-4 rounded-full bg-white/30 text-primary transition-colors duration-300">
-        <Icon size={28} />
-      </div>
-      <h3 className="text-lg font-semibold">{title}</h3>
-      <p className="text-sm text-secondary">{description}</p>
-    </Card>
+      <Card
+        className="group p-6 border transition-all duration-300 flex flex-col h-full"
+        style={{ backgroundColor: bgColor }}
+      >
+        <div className="flex justify-center items-center w-16 h-16 mx-auto mb-4 rounded-full bg-primary/20 text-primary transition-colors duration-300">
+          <Icon size={28} />
+        </div>
+        <h3 className="text-lg font-semibold mb-2">{title}</h3>
+        <p className="text-sm text-secondary mt-auto">{description}</p>
+      </Card>
+    </motion.div>
   );
 };
 
