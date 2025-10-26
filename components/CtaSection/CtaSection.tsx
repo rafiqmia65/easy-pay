@@ -8,7 +8,7 @@ const CtaSection: React.FC = () => {
   return (
     <Section>
       <div
-        className="rounded-2xl overflow-hidden relative"
+        className="rounded-2xl px-4 overflow-hidden relative"
         style={{
           backgroundImage: "url('/CTA/CtaBg.png')",
           backgroundSize: "cover",

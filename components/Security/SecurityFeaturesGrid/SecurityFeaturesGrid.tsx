@@ -43,7 +43,16 @@ const featuresData = [
 const SecurityFeaturesGrid: React.FC = () => {
   return (
     <section className="mt-5 relative">
-      <div className="rounded-2xl p-5" style={{ backgroundColor: "#F8F9FB" }}>
+      <div
+        className="rounded-2xl p-5"
+        style={{
+          // Custom subtle gradient background replicating the image's effect
+          background:
+            "linear-gradient(135deg, #fefefe 0%, #f7f7ff 50%, #fcf7ff 100%)",
+          // Optional: Add a subtle border/shadow to enhance the card-like appearance
+          boxShadow: "0 10px 30px rgba(0, 0, 0, 0.05)",
+        }}
+      >
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 
                      gap-x-8 gap-y-12 relative"
