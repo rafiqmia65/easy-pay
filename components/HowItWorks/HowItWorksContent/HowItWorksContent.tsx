@@ -50,7 +50,7 @@ const HowItWorksContent: React.FC = () => {
                     absolute z-10 
                     h-0.5 w-[80%] 
                     left-1/2 -translate-x-1/2 
-                    bg-gradient-to-r from-transparent via-gray-300 to-transparent 
+                    bg-linear-to-r from-transparent via-gray-300 to-transparent 
                     rounded-full
                   "
                   // Position the divider in the middle of the gap-10 (40px)
@@ -69,7 +69,7 @@ const HowItWorksContent: React.FC = () => {
                     absolute z-10 
                     top-1/2 -translate-y-1/2 
                     w-0.5 h-[80%] 
-                    bg-gradient-to-b from-transparent via-gray-300 to-transparent
+                    bg-linear-to-b from-transparent via-gray-300 to-transparent
                     rounded-full
                   "
                   // Position the divider between the grid columns

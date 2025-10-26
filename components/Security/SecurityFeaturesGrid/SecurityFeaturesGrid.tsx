@@ -3,37 +3,37 @@ import FeatureCard from "./FeatureCard/FeatureCard";
 
 const featuresData = [
   {
-    dotColor: "/security/Bollet1.png",
+    dotColor: "/Security/Bollet1.png",
     title: "Two-factor authentication",
     description:
       "Two-factor authentication ensures added protection by using verification steps.",
   },
   {
-    dotColor: "/security/Bollet2.png",
+    dotColor: "/Security/Bollet2.png",
     title: "Fraud detection and alerts",
     description:
       "Fraud detection safeguards your money, sending instant alerts for any activity.",
   },
   {
-    dotColor: "/security/Bollet3.png",
+    dotColor: "/Security/Bollet3.png",
     title: "Transaction notifications",
     description:
       "Instant notifications for transaction keep you informed to manage your finances.",
   },
   {
-    dotColor: "/security/Bollet4.png",
+    dotColor: "/Security/Bollet4.png",
     title: "Biometric access",
     description:
       "Easily and securely log in with biometric features, and facial recognition.",
   },
   {
-    dotColor: "/security/Bollet5.png",
+    dotColor: "/Security/Bollet5.png",
     title: "End-to-end encryption",
     description:
       "By encryption, protecting your data from unauthorized access.",
   },
   {
-    dotColor: "/security/Bollet6.png",
+    dotColor: "/Security/Bollet6.png",
     title: "24/7 Protection support",
     description:
       "Our dedicated team is available around the clock to help you.",
@@ -65,7 +65,7 @@ const SecurityFeaturesGrid: React.FC = () => {
                     absolute z-10
                     h-0.5 w-[80%]
                     left-1/2 -translate-x-1/2
-                    bg-gradient-to-r from-transparent via-gray-300 to-transparent
+                    bg-linear-to-r from-transparent via-gray-300 to-transparent
                     rounded-full
                   "
                   style={{
@@ -83,7 +83,7 @@ const SecurityFeaturesGrid: React.FC = () => {
                     absolute z-10
                     top-1/2 -translate-y-1/2
                     w-0.5 h-[80%]
-                    bg-gradient-to-b from-transparent via-gray-300 to-transparent
+                    bg-linear-to-b from-transparent via-gray-300 to-transparent
                     rounded-full
                   "
                   style={{

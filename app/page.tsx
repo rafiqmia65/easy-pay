@@ -2,6 +2,7 @@ import Features from "@/components/Features/Features";
 import Sponsors from "@/components/Sponsors/Sponsors";
 import HowItWorks from "@/components/HowItWorks/HowItWorks";
 import Security from "@/components/Security/Security";
+import Pricing from "@/components/Pricing/Pricing";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Sponsors></Sponsors>
       <HowItWorks></HowItWorks>
       <Security></Security>
+      <Pricing></Pricing>
     </>
   );
 }
